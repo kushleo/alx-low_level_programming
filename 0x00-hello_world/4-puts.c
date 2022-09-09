@@ -8,9 +8,7 @@
 
 *
 
-* Description: using the main function
-
-* this program prints "Programming is like building a multilingual puzzle
+* description: using the main function
 
 * Return: 0
 
