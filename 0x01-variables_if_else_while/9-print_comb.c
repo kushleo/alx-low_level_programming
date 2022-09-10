@@ -3,15 +3,10 @@
 
 
 /**
-
   * main - Prints a series of numbers with commas
-
   *
-
   * Return: Always (Success);
-
   */
-
 int main(void)
 
 {
