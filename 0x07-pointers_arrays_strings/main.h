@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**                                                                                                          
+/**
  * File: main.h
  * Auth: shedrach morris
  * description: Header file containing prototypes for all functions
