@@ -50,11 +50,8 @@ while (cents > 0)
 		cents -= 2;
 		continue;
 	}
-
-	cents--;
-
+		cents--;
 }
-printf("%d\n", coins);
-
-return (0);
+	printf("%d\n", coins);
+	return (0);
 }
