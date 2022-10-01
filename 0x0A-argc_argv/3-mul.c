@@ -1,210 +1,29 @@
-#include "main.h"
-
-
-
-int _atoi(char *s);
-
-int multiply_two_nums(int num1, int num2);
-
-void print_number(int n);
-
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
-
-* main - Entry point
-
-*
-
-* @argc: Length of @argv
-
-*
-
-* @argv: Array of strings of the arguments of this program
-
-*
-
-* Return: 0, Success
-
-*/
-
-
+ * main - program that prints its name, followed by a new line
+ * @argc: argument that counts argument input
+ * @argv: argument that stores the strings in an array of char* (strings)
+ * Return: 0
+ */
 
 int main(int argc, char *argv[])
-
 {
 
-	if (argc == 3)
+	int num_1, num_2, mul;
 
-	{
-
-		print_number(multiply_two_nums(_atoi(argv[1]), _atoi(argv[2])));
-
-		_putchar('\n');
-
-		return (0);
-
-	}
+	if (argc != 3)
+		printf("Error\n");
 
 	else
-
 	{
+		num_1 = atoi(argv[1]);
+		num_2 = atoi(argv[2]);
+		mul = num_1 * num_2;
 
-		_putchar('E');
-
-		_putchar('r');
-
-		_putchar('r');
-
-		_putchar('o');
-
-		_putchar('r');
-
-		_putchar('\n');
-
-		return (0);
-
+		printf("%d\n", mul);
 	}
 
+	return (0);
 }
-
-
-
-/**
-
-* _atoi - Convert a number in a string to an integer
-
-*
-
-* @s: String to be converted
-
-*
-
-* Return: Integer converted OR (0) if none
-
-*/
-
-
-
-int _atoi(char *s)
-
-{
-
-	int sign_cache = 1;
-
-	int result = 0;
-
-
-
-	while (s[0] != '\0')
-
-	{
-
-		if (s[0] == '-')
-
-			sign_cache *= -1;
-
-		else if (s[0] >= '0' && s[0] <= '9')
-
-			result = (result * 10) + (s[0] - '0');
-
-		else if (result)
-
-			break;
-
-
-
-		s++;
-
-	}
-
-
-
-	return (result * sign_cache);
-
-}
-
-
-
-/**
-
-* multiply_two_nums - Multiplies two numbers
-
-*
-
-* @num1: A number
-
-*
-
-* @num2: A number
-
-*
-
-* Return: Result of num1 * num2
-
-*/
-
-
-
-int multiply_two_nums(int num1, int num2)
-
-{
-
-	return (num1 * num2);
-
-}
-
-
-
-/**
-
-* print_number - Prints numbers chars
-
-*
-
-* @n: Integers params
-
-*
-
-* Return: 0
-
-*/
-
-
-
-void print_number(int n)
-
-{
-
-	unsigned int n1;
-
-
-
-	n1 = n;
-
-
-
-	if (n < 0)
-
-	{
-
-		_putchar('-');
-
-		n1 = -n;
-
-	}
-
-
-
-	if (n1 / 10 != 0)
-
-	{
-
-		print_number(n1 / 10);
-
-	}
-
-
-
-	_putchar((n1 % 10) + '0');
-
