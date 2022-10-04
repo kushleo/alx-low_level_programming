@@ -85,7 +85,7 @@ char **strtow(char *str)
 
 		return (NULL);
 
-	for (w = 0; w < words; w++)
+	if (w = 0; w < words; w++)
 
 		while (str[index] == ' ')
 
@@ -99,10 +99,11 @@ char **strtow(char *str)
 		{
 			for (; w >= 0; w--)
 
-				free(strings[w]);
+		free(strings[w]);
 
-			free(strings);
-			return (NULL);
+		free(strings);
+		
+	return (NULL);
 		}
 
 		for (l = 0; l < letters; l++)
