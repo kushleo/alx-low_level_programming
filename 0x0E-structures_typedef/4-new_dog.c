@@ -10,14 +10,14 @@
 char *_copy(char *src)
 {
 	char *ptr;
+
 	int i, len;
 
 	if (src == NULL)
 	{
 		return (NULL);
 	}
-
-	for (len = 0; src[len] != '\0'; len++);
+	for (len = 0; src[len] != '\0'; len++)
 
 	ptr = malloc(sizeof(char) * (len + 1));
 
@@ -32,6 +32,7 @@ char *_copy(char *src)
 	}
 
 	ptr[i] = '\0';
+
 	return (ptr);
 }
 
